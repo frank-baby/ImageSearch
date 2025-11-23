@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ImageSearch.Api.Integration/ImageSearch.Api.IntegrationTests.csproj" Id="3c83cb27-901f-4f77-8ed1-853aca0013d5" />
+  <Project Path="ImageSearch.Api.Tests/ImageSearch.Api.Tests.csproj" Id="fe5aea5e-47e1-4af5-894a-9216a46cb1d4" />
+  <Project Path="ImageSearch.Api/ImageSearch.Api.csproj" />
+</Solution>
