@@ -10,7 +10,7 @@ function App() {
   const { searchResult, isLoading, error, handleSearch, handleDismissError } = useImageSearch();
 
   return (
-    <div className="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 antialiased min-h-screen max-w-screen-2xl mx-auto">
+    <div className="bg-background-light font-display text-gray-800 antialiased min-h-screen max-w-screen-2xl mx-auto">
       <Header />
       <SearchBox onSearch={handleSearch} isLoading={isLoading} />
 

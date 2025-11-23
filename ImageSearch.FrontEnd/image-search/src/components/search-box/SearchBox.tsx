@@ -34,7 +34,7 @@ const SearchBox = ({ onSearch, isLoading }: SearchBoxProps) => {
             <div className="relative">
                 <HiSearch className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" />
                 <input
-                    className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-shadow"
+                    className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-shadow"
                     placeholder="Search for images..." type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
