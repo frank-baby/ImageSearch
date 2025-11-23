@@ -2,6 +2,11 @@
 
 A modern full-stack web application that searches and processes images from Unsplash API with intelligent resizing and parallel processing capabilities.
 
+## Preview
+
+![Application Preview](docs/images/screenshot.png)
+
+_Image search interface showing results from Unsplash API_
 
 ## ✨ Features
 
@@ -17,6 +22,7 @@ A modern full-stack web application that searches and processes images from Unsp
 ## 🏗️ Architecture
 
 ### Backend (ASP.NET Core 8.0)
+
 - **Clean Architecture** with separation of concerns
 - **Dependency Injection** for testability and maintainability
 - **Retry Policies** using Polly for transient failures
@@ -26,6 +32,7 @@ A modern full-stack web application that searches and processes images from Unsp
 - **Comprehensive Testing** (Unit + Integration tests)
 
 ### Frontend (React + TypeScript)
+
 - **Component-Based Architecture** with custom hooks
 - **Type-Safe** with full TypeScript coverage
 - **Modern Styling** using Tailwind CSS
@@ -43,17 +50,20 @@ A modern full-stack web application that searches and processes images from Unsp
 ### Backend Setup
 
 1. **Navigate to the API project:**
+
    ```bash
    cd ImageSearch.Api
    ```
 
 2. **Configure your Unsplash API key using User Secrets:**
+
    ```bash
    dotnet user-secrets init
    dotnet user-secrets set "Unsplash:ApiKey" "YOUR_UNSPLASH_API_KEY"
    ```
 
 3. **Restore dependencies and run:**
+
    ```bash
    dotnet restore
    dotnet run
@@ -64,11 +74,13 @@ A modern full-stack web application that searches and processes images from Unsp
 ### Frontend Setup
 
 1. **Navigate to the frontend project:**
+
    ```bash
    cd ImageSearch.FrontEnd/image-search
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
@@ -76,31 +88,24 @@ A modern full-stack web application that searches and processes images from Unsp
 3. **Configure the API URL (optional):**
 
    Create a `.env` file based on `.env.example`:
+
    ```bash
    cp .env.example .env
    ```
 
    Update the API URL if needed:
+
    ```env
    VITE_API_BASE_URL=http://localhost:5000/api
    ```
 
 4. **Start the development server:**
+
    ```bash
    npm run dev
    ```
 
    The app will open at `http://localhost:5173`
-
-### 🐳 Docker Setup (Optional)
-
-Run the entire stack with Docker:
-
-```bash
-# Build and run
-docker build -t imagesearch-api ./ImageSearch.Api
-docker run -p 5000:8080 -e Unsplash__ApiKey=YOUR_API_KEY imagesearch-api
-```
 
 ## 🧪 Running Tests
 
@@ -167,6 +172,7 @@ ImageSearch/
 Search and process images from Unsplash.
 
 **Request:**
+
 ```json
 {
   "searchQuery": "mountains"
@@ -174,6 +180,7 @@ Search and process images from Unsplash.
 ```
 
 **Response:**
+
 ```json
 {
   "searchQuery": "mountains",
@@ -203,7 +210,7 @@ Retrieve processed images (served as static files).
 ```json
 {
   "Unsplash": {
-    "ApiKey": ""  // Set via user secrets or environment variable
+    "ApiKey": "" // Set via user secrets or environment variable
   },
   "ImageProcessing": {
     "OutputDirectory": "processed-images",
@@ -217,6 +224,7 @@ Retrieve processed images (served as static files).
 ## 🛠️ Technology Stack
 
 ### Backend
+
 - **Framework**: ASP.NET Core 8.0
 - **Image Processing**: SixLabors.ImageSharp 3.1.12
 - **Resilience**: Polly 10.0.0
@@ -224,6 +232,7 @@ Retrieve processed images (served as static files).
 - **API Documentation**: Swashbuckle (Swagger/OpenAPI)
 
 ### Frontend
+
 - **Framework**: React 19.2.0
 - **Language**: TypeScript 5.9.3
 - **Build Tool**: Vite 7.2.4
@@ -233,12 +242,14 @@ Retrieve processed images (served as static files).
 ## 🚀 Deployment
 
 ### Backend Deployment
+
 1. Configure production `appsettings.Production.json`
 2. Set environment variables for API keys
 3. Update CORS to allow only your frontend domain
 4. Deploy to Azure App Service, AWS, or containerized environment
 
 ### Frontend Deployment
+
 1. Build the production bundle: `npm run build`
 2. Deploy the `dist` folder to Netlify, Vercel, or similar
 3. Update `VITE_API_BASE_URL` to point to your production API
